@@ -1,6 +1,6 @@
 function fetchWithRetry(url, retries = 3, delay = 1000) {
       return new Promise((resolve, reject) => {
-        function attemptFetch(attempt) {
+        function attemptFetch(attempt) {f
           fetch(url)
             .then(response => {
               if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
