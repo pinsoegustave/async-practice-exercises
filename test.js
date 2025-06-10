@@ -8,14 +8,23 @@ const promise = (num) => {
   });
 };
 
-//using forEach method
-function display(numbers) {
-    numbers.forEach(async (num) => {
-        const dis = await promise(num);
+//using for...of
+async function display(nums) {
+    for (const element of nums) {
+        const dis = await promise(element)
         console.log(dis);
-    });
+    }
 }
 display(nums);
+
+//using forEach method
+// function display(numbers) {
+//     numbers.forEach(async (num) => {
+//         const dis = await promise(num);
+//         console.log(dis);
+//     });
+// }
+// display(nums);
 
 
 // promise(3).then((result) => console.log(result))
