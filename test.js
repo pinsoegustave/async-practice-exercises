@@ -8,5 +8,15 @@ const promise = (num) => {
   });
 };
 
-promise(3).then((result) => console.log(result))
-    .catch((error) => console.log(error));
+//using forEach method
+function display(numbers) {
+    numbers.forEach(async (num) => {
+        const dis = await promise(num);
+        console.log(dis);
+    });
+}
+display(nums);
+
+
+// promise(3).then((result) => console.log(result))
+//     .catch((error) => console.log(error));
